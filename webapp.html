@@ -1,0 +1,108 @@
+<a href="index.html">Back to Resume</a>
+<div></div>
+  <a href="scratch.html">Go Home</a>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Joke Generator</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e6f2e6;  /* Light green background */
+      color: #333;  /* Dark gray text for readability */
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #2e8b57;  /* Accent green */
+    }
+
+    button {
+      font-size: 1.3em;
+      padding: 12px 25px;
+      margin: 20px;
+      cursor: pointer;
+      border-radius: 10px;
+      border: none;
+      background-color: #3cb371;  /* Button green */
+      color: white;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    button:hover {
+      background-color: #2e8b57;
+      transform: scale(1.05);
+    }
+
+    .joke-box {
+      margin: 30px auto;
+      font-size: 1.5em;
+      padding: 25px;
+      border-radius: 15px;
+      background-color: #ffffff;  /* White for contrast */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 80%;
+      max-width: 600px;
+      color: #333;
+    }
+
+    .joke-box::before {
+      content: "🃏 ";
+    }
+
+    footer {
+      margin-top: 50px;
+      color: #2e8b57;
+    }
+
+    a {
+      color: #2e8b57;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Will's Random Joke Generator</h1>
+  <button onclick="tellJoke()">Tell Me a Joke!</button>
+
+  <div class="joke-box" id="jokeBox">
+    Click the button to hear a funny joke!
+  </div>
+
+  <footer>
+    <a href="index.html">← Back to Professional Pages</a>
+  </footer>
+
+  <script>
+    const jokes = [
+      "Why did the scarecrow win an award? Because he was outstanding in his field!",
+      "Why don’t scientists trust atoms? Because they make up everything!",
+      "What do you call a bear with no teeth? A gummy bear!",
+      "Why did the bicycle fall over? Because it was two-tired!",
+      "What do you call cheese that isn't yours? Nacho cheese!",
+      "Why can't Elsa have a balloon? Because she will let it go!",
+      "What did one wall say to the other? I'll meet you at the corner!",
+      "How does a cucumber become a pickle? It goes through a jarring experience!",
+      "Why did the math book look sad? Because it had too many problems!",
+      "What do you call a sleeping bull? A bulldozer!"
+    ];
+
+    function tellJoke() {
+      const randomIndex = Math.floor(Math.random() * jokes.length);
+      document.getElementById('jokeBox').textContent = jokes[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
